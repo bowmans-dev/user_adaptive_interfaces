@@ -13,11 +13,7 @@
   --saturation: 100%;
   --lightness: 50%;
 
-  --brand: hsl(
-    var(--hue)
-    calc(var(--saturation) / 2)
-    var(--lightness)
-  );
+  --brand: hsl(var(--hue) calc(var(--saturation) / 2) var(--lightness));
 
   --text1: hsl(var(--hue) 15% 85%);
   --text2: hsl(var(--hue) 15% 65%);
@@ -27,25 +23,12 @@
   --surface4: hsl(var(--hue) 5% 25%);
 }
 
-@media (prefer-color-scheme: light) {
+@media (prefers-color-scheme: light) {
   :root {
-    --brand: hsl(
-    var(--hue)
-    var(--saturation)
-    var(--lightness)
-    
-    --text1: hsl(
-      var(--hue)
-      var(--saturation)
-    )
-    );
+    --brand: hsl(var(--hue) var(--saturation) var(--lightness));
 
-    --text2: hsl(
-      var(--hue)
-      (calc(var(--saturation) / 2 )
-      30%
-    )
-    );
+    --text1: hsl(var(--hue) var(--saturation) 10%);
+    --text2: hsl(var(--hue) (calc(var(--saturation) / 2 ) 30%));
 
     --surface1: hsl(var(--hue) 20% 98%);
     --surface2: hsl(var(--hue) 10% 99%);
