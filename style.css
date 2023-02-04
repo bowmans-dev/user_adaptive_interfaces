@@ -114,7 +114,7 @@ fieldset {
   background: var(--surface2);
 }
 
-@media (min-width: 540px) {
+@media (min-width: 300px) {
   .fieldset-item {
     grid-template-columns: var(--space-xxl) 1fr;
     gap: var(--space-xs);
